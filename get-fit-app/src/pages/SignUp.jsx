@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
+    const navigation = useNavigate()
     const [email , setEmail] = useState('');
     const [name , setName ] = useState('');
     const [password , setPass]     = useState('');
-
     const [error , setError ] = useState({});
     const [submit , setSubmit] = useState(false);
 
@@ -36,7 +36,10 @@ const SignUp = () => {
         const errorValidator = validation();
         if(Object.keys(errorValidator).length === 0) {
             setSubmit(true);
-            const userInfo ={name , email , password };
+
+            // setId((e)=> {id:e.Date.now()}  );
+
+            const userInfo ={id: Date.now() , name , email , password };
             let existingUsers = JSON.parse(localStorage.getItem('users')) || [];
             if (!Array.isArray(existingUsers)) {
                 existingUsers = []; 
@@ -45,9 +48,13 @@ const SignUp = () => {
             existingUsers.push(userInfo);
 
 
-            console.log(userInfo)
+            // console.log(userInfo)
             localStorage.setItem("users" , JSON.stringify(existingUsers));
             setError({});
+            setTimeout(()=>{navigation('/exp', {replace:true})},1000)
+
+
+
         }else {
             setError(errorValidator);
             setSubmit(false);
@@ -59,7 +66,9 @@ const SignUp = () => {
 
     return ( 
         <div className=" bg-green-600 w-auto p-10 rounded-3xl flex justify-self-center mt-36 relative justify-center h-auto shadow-2xl  ">
+        
         <div className="">
+        <h1 className="text-white text-3xl font-extrabold text-center mb-7 ">Sign Up</h1>
         <form onSubmit={handleSubmit} className="flex flex-col">
             <input name="username" type="text" value={name} placeholder="Username" onChange={handleChange} className={`mt-2 mb-2 rounded-2xl border-2 font-semibold text-xl p-3 ${error.username ? "border-red-500 " : "border-blue-100"}`}/>
             {error.username && <p className="text-red-400 text-xl font-semibold">{error.username}</p>}  
@@ -77,7 +86,7 @@ const SignUp = () => {
 
 
             </div>
-            {submit && <p className="uppercase text-center font-bold text-white text-3xl mt-5 transform duration-200 ">welcome</p>}
+            {submit && <p className="uppercase text-center font-bold text-white text-3xl mt-5 transform transition ease-in duration-100">welcome</p>}
         </form>
         </div>
         </div>
