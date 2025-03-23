@@ -33,7 +33,7 @@ function FormikForm() {
 
         if (currentUser) {
             setSubmitted(true);
-            setTimeout( ()=>navigate("/exp", { replace: true }) , 1000);
+            setTimeout( ()=>navigate("/addWorkout", { replace: true }) , 1000);
            
 
             console.log(currentUser);
