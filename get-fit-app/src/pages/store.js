@@ -13,16 +13,12 @@ const UseStore = create(
 
         removeWorkOut: (workOutId) => {
             set((state)=>({
-                workOuts: state.workOuts.filter((e)=>{ e.id !== workOutId})
+                workOuts: state.workOuts.filter((e)=> e.id !== workOutId)
 
             }))
         },
 
-        addWeight:(weight) =>{
-            set((state)=>({
-                workOuts:[weight, ...state.workOuts]
-            }))
-        }
+       
 
 
 
