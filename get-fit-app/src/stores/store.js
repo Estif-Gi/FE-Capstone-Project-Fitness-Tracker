@@ -17,6 +17,18 @@ const UseStore = create(
 
             }))
         },
+        graphInput:[],
+        addGraphInput:(bodyPart) => {
+            set((state)=>({
+                graphInput: [bodyPart , ...state.graphInput]
+            }))
+        },
+        // removeGraph:() =>{
+        //     set((state)=>({
+        //         graphInput: state.graphInput.filter((e)=>e.includes('part'))
+        //     }))
+        // }
+
 
        
 

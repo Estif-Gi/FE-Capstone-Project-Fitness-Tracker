@@ -8,6 +8,7 @@ export default {
         greenBg: '#4CAF50',
         blueBt:'#4070FF',
         lightBlBt:'#B7C8FC'
+        
       }
     },
   },

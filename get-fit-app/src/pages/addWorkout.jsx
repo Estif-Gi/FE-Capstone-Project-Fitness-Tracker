@@ -1,4 +1,4 @@
-import UseStore from "./store"
+import UseStore from "../stores/store"
 import { useState } from "react";
 import WorkOutList from "./workOutList";
 const AddWorkout = () => {
@@ -11,7 +11,7 @@ const AddWorkout = () => {
         const addWorkOteNames = UseStore((state)=>state.addWorkOteNames);
    
         const handelSubmit = () =>{
-            if(!workOutName) {alert("please enter the name of the exercise"); return}
+            if(!workOutName || !weight || !reps || !sets) {alert("please enter the name of the exercise"); return}
             addWorkOteNames({
                 id:Date.now(),
                 workOutName:workOutName,
@@ -28,13 +28,13 @@ const AddWorkout = () => {
 
     return ( 
         <div>
-            <div className=" flex flex-col justify-self-center pl-6 pr-6 bg-green-600 m-5 rounded-2xl shadow-xl relative md:w-96">
-                <h1 className="text-white font-bold text-2xl text-center mt-4 ">create your own exercise list</h1>
+            <div className="bg-opacity-80 flex flex-col justify-self-center pl-6 pr-6 bg-gray-700 m-5 rounded-2xl shadow-2xl relative md:w-96">
+                <h1 className="text-white font-bold text-2xl text-center mt-4 ">Create your own exercise list</h1>
                 <input type="text"
                         placeholder="exercise name" 
                         onChange={(e)=>setWorkOutName(e.target.value)}
                         value={workOutName}
-                        className="border-green-600 flex justify-self-center m-8 mt-5 border-2 rounded-xl p-2 "
+                        className="border-black flex justify-self-center m-8 mt-5 border-2 rounded-xl p-2 "
                         required
                 />
                 <div className="flex justify-center gap-8">
@@ -42,27 +42,27 @@ const AddWorkout = () => {
                             placeholder="Rep" 
                             onChange={(e)=>setReps(e.target.value)}
                             value={reps}
-                            className="border-green-600 flex justify-self-center  border-2 rounded-xl p-2 w-16"
+                            className="border-gray-900 flex justify-self-center  border-2 rounded-xl p-2 w-16"
                             required
                             />
                     <input type="number" 
                             placeholder="Sets" 
                             onChange={(e)=>setSets(e.target.value)}
                             value={sets}
-                            className="border-green-600 flex justify-self-center  border-2 rounded-xl p-2 w-16"
+                            className="border-gray-900 flex justify-self-center  border-2 rounded-xl p-2 w-16"
                             required
                             />
                     <input type="text" 
                             placeholder="weight" 
                             onChange={(e)=>setWeight(e.target.value)}
                             value={weight}
-                            className="border-green-600 flex justify-self-center border-2 rounded-xl p-2 w-20"
+                            className="border-gray-900 flex justify-self-center border-2 rounded-xl p-2 w-20"
                             required
                             />
                 </div>
 
                 <button onClick={handelSubmit}
-                        className=" text-white font-bold text-3xl mt-6 flex justify-end "
+                        className=" text-orange-600 font-bold text-3xl mt-6 flex justify-end "
 
                         >Add</button>
                 <br/>

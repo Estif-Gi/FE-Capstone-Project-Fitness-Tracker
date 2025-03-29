@@ -65,7 +65,7 @@ const SignUp = () => {
 
 
     return ( 
-        <div className=" bg-green-600 w-auto p-10 rounded-3xl flex justify-self-center mt-36 relative justify-center h-auto shadow-2xl  ">
+        <div className=" bg-gray-700 border-2 border-gray-500 bg-opacity-70  w-auto p-10 rounded-3xl flex justify-self-center mt-36 relative justify-center h-auto shadow-2xl hover:shadow-xl hover:shadow-black-400">
         
         <div className="">
         <h1 className="text-white text-3xl font-extrabold text-center mb-7 ">Sign Up</h1>
@@ -81,8 +81,8 @@ const SignUp = () => {
         
 
             <div className='flex justify-around mt-10'>
-                <button className="  w-32 bg-blue-300 rounded-xl p-2 border-blue-600 border-2 hover:bg-blue-400 transform duration-100 active:scale-95 text-white font-bold text-2xl" type='submit'>Sign Up</button>
-                <Link to='/login'> <button  className=" bg-blue-300 rounded-xl p-2 border-blue-600 border-2 hover:bg-blue-400 transform duration-100 active:scale-95 text-white font-bold text-2xl" >Log In</button> </Link>
+                <button className="   shadow-orange-600 shadow-md hover:shadow-lg hover:shadow-orange-500 w-32 bg-gray-500 rounded-xl p-2 hover:bg-gray-800 transform duration-300 active:scale-95 text-white font-bold text-2xl hover:scale-105 " type='submit'>Sign Up</button>
+                <Link to='/login'> <button  className="  shadow-orange-600  shadow-md hover:shadow-lg hover:shadow-orange-500 w-32 bg-gray-500 rounded-xl p-2 hover:bg-gray-800 transform duration-300 active:scale-95 text-white font-bold text-2xl hover:scale-105 ml-8" >Log In</button> </Link>
 
 
             </div>
