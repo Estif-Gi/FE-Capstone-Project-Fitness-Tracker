@@ -10,7 +10,7 @@ const Graph = () => {
 
     return (
         <div className="bg-gray-800  border-gray-500 bg-opacity-70 border-2 w-fit p-4 rounded-xl m-4 ">
-            <AreaChart width={600} height={400} data={graphInput}>
+            <AreaChart width={450} height={350} data={graphInput}>
                 <CartesianGrid strokeDasharray="9 3" />
                 <XAxis dataKey="date" />
                 
