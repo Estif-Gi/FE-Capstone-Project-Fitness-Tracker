@@ -3,11 +3,24 @@
 @tailwind utilities;
 
 :root {
-  background-image: url("../image/background.jpg");
+  background-image: url("../image/background_phone.jpg"); 
   background-size:cover;
   background-position: center;
   background-origin: cover;
   height: 100%;
   width: 100%;  
-  /* background-repeat: none; */
+  /* background-repeat: no-repeat;
+  background-color: rgb(42, 74, 56); */
+}
+
+@media (min-width: 500px) {
+  :root {
+    background-image: url("../image/background.jpg");
+    background-size:cover;
+    background-position: center;
+    background-origin: cover;
+    height: 100%;
+    width: 100%; 
+    /* background-repeat: no-repeat;  */
+  }
 }

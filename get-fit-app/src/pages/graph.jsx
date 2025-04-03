@@ -9,8 +9,8 @@ const Graph = () => {
 
 
     return (
-        <div className="bg-gray-800  border-gray-500 bg-opacity-70 border-2 w-fit p-4 rounded-xl m-4 ">
-            <AreaChart width={450} height={350} data={graphInput}>
+        <div className="bg-gray-800  border-gray-500 bg-opacity-70 border-2 w-fit p-4 rounded-xl  ">
+            <AreaChart width={350} height={250} data={graphInput}>
                 <CartesianGrid strokeDasharray="9 3" />
                 <XAxis dataKey="date" />
                 

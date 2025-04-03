@@ -23,11 +23,20 @@ const UseStore = create(
                 graphInput: [bodyPart , ...state.graphInput]
             }))
         },
-        // removeGraph:() =>{
-        //     set((state)=>({
-        //         graphInput: state.graphInput.filter((e)=>e.includes('part'))
-        //     }))
-        // }
+        searchTerm:'',
+        
+        setSearchTerm: (term) => set({searchTerm: term}),
+
+        FilteredExercise:[],
+
+        FilterExercise:() => {
+            set((state)=>({
+                FilteredExercise:state.workOuts.filter((workout)=>
+                    workout.workOutName.toLowerCase().includes(state.searchTerm.toLowerCase()) 
+                ) 
+            }))
+        }
+        
 
 
        

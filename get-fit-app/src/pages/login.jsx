@@ -11,7 +11,7 @@ const validationSchema = Yup.object({
     password: Yup.string().required("Password is required"),
 });
 
-function FormikForm() {
+function Login() {
     const [submitted, setSubmitted] = useState(false);
     const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ function FormikForm() {
       }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        // console.log(,values);
+        // console.log(values);
         const users = JSON.parse(localStorage.getItem('users')) || [];
         // console.log(users);
         const currentUser = users.find(user=>user?.name === values.username && user?.password === values.password);
@@ -33,10 +33,10 @@ function FormikForm() {
 
         if (currentUser) {
             setSubmitted(true);
-            setTimeout( ()=>navigate("/addWorkout", { replace: true }) , 1000);
+            setTimeout( ()=>navigate("/home", { replace: true }) , 1000);
            
 
-            console.log(currentUser);
+            // console.log(currentUser);
           } else {
              alert('incorrect Password or Username')
              setSubmitted(false);
@@ -70,7 +70,7 @@ function FormikForm() {
 
           <div className='flex justify-around mt-10'>
                 <button className="  shadow-orange-600  shadow-sm hover:shadow-lg hover:shadow-orange-500 w-32 bg-gray-500 rounded-xl p-2 hover:bg-gray-800 transform duration-300 active:scale-95 text-white font-bold text-2xl hover:scale-105 " type='submit'>Log In</button>
-                <Link to='/'> <button  className=" shadow-orange-600 hover:shadow-lg shadow-sm hover:shadow-orange-500 w-32 bg-gray-500 rounded-xl p-2 hover:bg-gray-800 transform duration-300 active:scale-95 text-white font-bold text-2xl hover:scale-105 ml-6" >Sign Up</button> </Link>
+                <Link to='/signup'> <button  className=" shadow-orange-600 hover:shadow-lg shadow-sm hover:shadow-orange-500 w-32 bg-gray-500 rounded-xl p-2 hover:bg-gray-800 transform duration-300 active:scale-95 text-white font-bold text-2xl hover:scale-105 ml-6" >Sign Up</button> </Link>
 
 
             </div>
@@ -84,4 +84,4 @@ function FormikForm() {
   );
 }
 
-export default FormikForm;
+export default Login;
