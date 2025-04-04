@@ -43,7 +43,7 @@ const AddWorkout = () => {
     return ( 
         <div>
             <div className="md:flex lg:items-center lg:justify-center md:mt-5">
-            <div className="md:flex md:flex-col-reverse md:items-end md:mt-8  ">
+            <div className="md:flex md:flex-col-reverse md:items-end md:mt-  ">
                 <div className="border-2 border-gray-400 bg-opacity-80 flex flex-col justify-self-center pl-6 pr-6 bg-gray-700 m-5 rounded-2xl shadow-2xl relative md:w-96">
                     <h1 className="text-white font-bold text-2xl text-center mt-4 ">Create your own exercise list</h1>
                     <input type="text"
@@ -87,7 +87,7 @@ const AddWorkout = () => {
                     
                     
                 </div>
-                <div>
+                <div className="">
 
                     <input  type="text"
                             placeholder="Search Exercise"
@@ -96,7 +96,7 @@ const AddWorkout = () => {
                                     const value = e.target.value
                                     setSearchTerm(value.charAt(0).toUpperCase() + value.slice(1))}}
                                     value={searchTerm}
-                                    className="flex justify-self-center md:justify-self-end p-2  rounded-xl w-auto "
+                                    className="flex border-black border-2 justify-self-center md:justify-self-end p-2  rounded-xl w-auto "
                                     />
                 </div>
             

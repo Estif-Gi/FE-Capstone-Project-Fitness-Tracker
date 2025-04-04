@@ -20,7 +20,7 @@ const WorkOutList = () => {
     
     
     return(
-        <ul className="flex flex-col flex-wrap justify-self-center ml-2 sm:grid sm:grid-cols-2 " >
+        <ul className="flex flex-col flex-wrap justify-self-center ml-2 sm:grid sm:grid-cols-1 md: xl:grid-cols-3  " >
                 
             {exerciseToDisplay.map((workOut )=>{
                 return(

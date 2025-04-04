@@ -6,7 +6,7 @@ import AddWorkout from "./pages/addWorkout";
 import Home from "./pages/home";
 import Ninja from "./pages/ninjasAPI";
 import GraphInput from "./pages/progress";
-import Graph from "./pages/graph";
+import Landing from "./pages/landingPage";
 import About from "./pages/About";
 import Nav from "./pages/nav";
 import Footer from "./pages/footer";
@@ -15,7 +15,7 @@ const queryClient = new QueryClient();
 
 function AppLayout() {
   const location = useLocation();
-  const hideNavAndFooter = ["/signup", "/login"].includes(location.pathname);
+  const hideNavAndFooter = ["/signup", "/login" , "/"].includes(location.pathname);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -28,7 +28,7 @@ function AppLayout() {
           <Route path="/home" element={<Home />} />
           <Route path="/exerciseList" element={<Ninja />} />
           <Route path="/progress" element={<GraphInput />} />
-          <Route path="/graph" element={<Graph />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>

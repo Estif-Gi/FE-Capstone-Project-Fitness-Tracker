@@ -27,7 +27,7 @@ const GraphInput = () => {
 
 
     return (
-     <div className="m-2 flex flex-col justify-center md:flex-row md:justify-self-center md:items-center ">
+     <div className="m-2 flex flex-col justify-center items-center md:flex-row md:justify-self-center md:items-center ">
         <Graph/>
 
         <div className="text-white flex justify-center ">
@@ -65,7 +65,7 @@ const GraphInput = () => {
                                 value={upper}
                                 onChange={(e)=>{setUpper(e.target.value)}}
                                 required
-                                className="p-2 m-2 border-2 text-gray-400  border-black rounded-xl w-16"
+                                className="p-2 m-2 border-2 text-gray-900  border-orange-500 rounded-xl w-16"
                                 />
                     </div>
                     <div className="flex flex-col justify-center">
@@ -78,7 +78,7 @@ const GraphInput = () => {
                                 onChange={(e)=>{setLower(e.target.value)}}
                                 required
                                 placeholder="Min"
-                                className="p-2 m-2 border-2 text-gray-400  border-black rounded-xl w-16"
+                                className="p-2 m-2 border-2 text-gray-900  border-green-600 rounded-xl w-16"
                                 />
                     </div>
                     <div className="flex flex-col justify-center">
@@ -91,7 +91,7 @@ const GraphInput = () => {
                                 onChange={(e)=>{setCore(e.target.value)}}
                                 required
                                 placeholder="Min"
-                                className="p-2 m-2 border-2 text-gray-400  border-black rounded-xl w-16"
+                                className="p-2 m-2 border-2 text-gray-900  border-blue-400 rounded-xl w-16"
                                 />
                     </div>
                 </div>

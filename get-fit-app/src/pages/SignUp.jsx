@@ -51,7 +51,7 @@ const SignUp = () => {
             // console.log(userInfo)
             localStorage.setItem("users" , JSON.stringify(existingUsers));
             setError({});
-            setTimeout(()=>{navigation('/exp', {replace:true})},1000)
+            setTimeout(()=>{navigation('/home', {replace:true})},1000)
 
 
 

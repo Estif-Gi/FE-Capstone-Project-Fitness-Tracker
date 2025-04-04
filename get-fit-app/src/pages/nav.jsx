@@ -12,7 +12,7 @@ const Nav = () => {
                 <div className="  sm:flex justify-between items-center">
 
                     <div className="mr-auto flex justify-start">
-                        <img src="../../image/Get Fit.png" alt="Logo"></img>
+                        <Link to="/"><img src="../../image/Get Fit.png" alt="Logo"></img></Link>
                     </div>
 
                     <div className="hidden text-orange-50 text-lg font-semibold sm:flex gap-6 mr-10 justify-self-end">
