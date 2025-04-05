@@ -18,7 +18,7 @@ function AppLayout() {
   const hideNavAndFooter = ["/signup", "/login" , "/"].includes(location.pathname);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen font-Nunito">
       {!hideNavAndFooter && <Nav />}
       <main className="flex-1">
         <Routes>

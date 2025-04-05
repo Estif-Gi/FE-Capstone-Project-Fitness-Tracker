@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Landing = () => {
     return ( 
         <header className="min-h-screen backdrop-blur-sm p-2">
-            <img className="m-10 flex justify-self-center w-[60%] sm:w-[30%] md:w-[20%] "
+            <img className="m-10 flex justify-self-center w-[60%] sm:w-[30%] md:w-[20%] lg:w-[14%] "
                  src='../../image/Get Fit.png' alt="Logo"
             />
             <h1 className="text-orange-300 font-bold hidden">Get Fit</h1>

@@ -9,7 +9,11 @@ export default {
         blueBt:'#4070FF',
         lightBlBt:'#B7C8FC'
         
+      },
+      fontFamily:{
+        Nunito: ['Nunito']
       }
+
     },
   },
   plugins: [],
