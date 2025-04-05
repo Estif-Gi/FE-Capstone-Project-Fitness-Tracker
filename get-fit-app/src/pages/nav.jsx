@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Graph from "./graph";
-import { Menu , X  } from "lucide-react";
+import { Menu , Option, X  } from "lucide-react";
 import { useState } from "react";
 const Nav = () => {
 
@@ -32,8 +32,8 @@ const Nav = () => {
 
                 {isOpen && (
                     <div className="  md:flex justify-between items-center">
+                
 
-                    
 
                     <div className="text-orange-100 text-center flex flex-col bg-gray-500 bg-opacity-50 p-5 justify-self-end gap-7 -translate-y-2 translate-x-5 ">
                     <Link to="/">Home</Link>
@@ -42,6 +42,7 @@ const Nav = () => {
                     <Link to="/about">About</Link>
                     <Link to="/setting">Setting</Link>
                     </div> 
+                
                 
                 </div>
                 )}

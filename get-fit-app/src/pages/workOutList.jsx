@@ -14,7 +14,7 @@ const WorkOutList = () => {
     const exerciseToDisplay = searchTerm ? FilteredExercise : workOuts
 
     if (!exerciseToDisplay || exerciseToDisplay.length === 0) {
-        return <p className="text-gray-500 p-5">Workout dose not exist.</p>;
+        return <p className="text-gray-200 p-5">Workout dose not exist yet.</p>;
     }
     // console.log(workOuts);
     
