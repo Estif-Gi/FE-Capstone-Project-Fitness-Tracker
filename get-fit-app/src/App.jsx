@@ -2,14 +2,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/login";
-import AddWorkout from "./pages/addWorkout";
+import AddWorkout from "./components/addWorkout";
 import Home from "./pages/home";
 import Ninja from "./pages/ninjasAPI";
 import GraphInput from "./pages/progress";
 import Landing from "./pages/landingPage";
 import About from "./pages/About";
-import Nav from "./pages/nav";
-import Footer from "./pages/footer";
+import Nav from "./components/nav";
+import Footer from "./components/footer";
 
 const queryClient = new QueryClient();
 

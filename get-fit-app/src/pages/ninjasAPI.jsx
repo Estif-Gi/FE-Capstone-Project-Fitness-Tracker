@@ -1,5 +1,4 @@
 import { useState ,useEffect } from "react";
-import Nav from "./nav";
 import { Link } from "react-router-dom";
 const Ninja = () =>{
   

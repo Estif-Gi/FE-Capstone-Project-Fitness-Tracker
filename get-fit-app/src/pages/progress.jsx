@@ -1,6 +1,6 @@
 import UseStore from "../stores/store";
 import { useState } from "react";
-import Graph from "./graph";
+import Graph from "../components/graph";
 
 
 const GraphInput = () => {

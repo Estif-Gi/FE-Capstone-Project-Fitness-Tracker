@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Graph from "./graph";
 import { Menu , Option, X  } from "lucide-react";
 import { useState } from "react";
 const Nav = () => {

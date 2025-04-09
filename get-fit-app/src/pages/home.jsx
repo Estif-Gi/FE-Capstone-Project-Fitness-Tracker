@@ -1,5 +1,5 @@
-import Graph from "./graph"
-import WorkOutList from "./workOutList";
+import Graph from "../components/graph"
+import WorkOutList from "../components/workOutList";
 const Home = () => {
     return ( 
         <div className="sm:flex items-center justify-center">
